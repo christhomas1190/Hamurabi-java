@@ -1,15 +1,12 @@
-package hammurabi.docs.matuszek;
-
-import static org.junit.Assert.*;
+package hammurabi;
 
 import hammurabi.docs.Hammurabi;
 import org.junit.Before;
-import org.junit.Test;
 
-public class HammurabiTest {
-    
+public class hammurabiTest {
+
     Hammurabi ham;
-    
+
     boolean about(double expected, double actual) {
         return actual > 0.90 * expected && actual < 1.10 * expected;
     }
@@ -18,6 +15,7 @@ public class HammurabiTest {
     public void setUp() throws Exception {
         ham = new Hammurabi();
     }
+}
 
 //    @Test
 //    public final void testPlagueDeaths1() {
@@ -32,7 +30,7 @@ public class HammurabiTest {
 //        assertTrue("Number of plagues is about " + percentPlagues + ", not about 15%.",
 //                   about(1500, number_of_plagues));
 //    }
-//
+////
 //    @Test
 //    public final void testPlagueDeaths2() {
 //        int deaths = 0;
@@ -78,7 +76,7 @@ public class HammurabiTest {
 //            assertTrue("You never have a yield of " + j + " bushels per acre.", yield[j] > 0);
 //        }
 //    }
-//
+
 //    @Test
 //    public final void testGrainEatenByRats1() {
 //        int infestations = 0;
@@ -121,6 +119,6 @@ public class HammurabiTest {
 //            assertTrue("You never have a land cost of " + j + " bushels per acre.", cost[j] > 0);
 //        }
 //    }
-
-}
+//
+//}
 

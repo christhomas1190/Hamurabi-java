@@ -26,9 +26,10 @@ public class Hammurabi {
             acres -= acresToSell;
             bushels += acresToSell * landPrice;
 
-            int bushelsToFeed = userInput("How many bushels would you like to sell?", 0, bushels);
+            int bushelsToFeed = userInput("How many bushels would you like feed your people?", 0, bushels);
             bushels -= bushelsToFeed;
             peopleStarving(bushelsToFeed);
+
 
             int acresToPlant = userInput("How many acres do you want to plant on", 0, Math.min(acres, population * 10));
             int seedsReq = acresToPlant / 2;
@@ -91,8 +92,17 @@ public class Hammurabi {
     private void plague() {
     }
 
-    private void peopleStarving() {
-
+    private void peopleStarving(int bushelsToFeed) {
+        int foodNeeded= population*20;//everyone needs 20 bushels
+        if(bushelsToFeed<foodNeeded){
+            int peopleFed =bushelsToFeed/20;
+            int deaths = population-peopleFed;
+            totalDeaths+=deaths;
+            population =peopleFed;
+            System.out.printf("%d people starved this year.\n", deaths);
+        }else{
+            System.out.println("Everyone was fed");
+        }
     }
 
     private void endGame() {

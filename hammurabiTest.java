@@ -1,21 +1,21 @@
-package hammurabi;
-
-import hammurabi.docs.Hammurabi;
-import org.junit.Before;
-
-public class hammurabiTest {
-
-    Hammurabi ham;
-
-    boolean about(double expected, double actual) {
-        return actual > 0.90 * expected && actual < 1.10 * expected;
-    }
-
-    @Before
-    public void setUp() throws Exception {
-        ham = new Hammurabi();
-    }
-}
+//package hammurabi;
+//
+//import hammurabi.docs.Hammurabi;
+//import org.junit.Before;
+//
+//public class hammurabiTest {
+//
+//    Hammurabi ham;
+//
+//    boolean about(double expected, double actual) {
+//        return actual > 0.90 * expected && actual < 1.10 * expected;
+//    }
+//
+//    @Before
+//    public void setUp() throws Exception {
+//        ham = new Hammurabi();
+//    }
+//}
 
 //    @Test
 //    public final void testPlagueDeaths1() {

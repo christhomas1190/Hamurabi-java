@@ -82,10 +82,6 @@ public class Hammurabi {
         bushels += harvested;
     }
 
-    private void intro() {
-        System.out.println("OH GREAT HAMURABI, TRY YOUR HAND AT GOVERNING THE GREAT PEOPLE OF WILMINGTON");
-    }
-
     private void rats() {
     }
 
@@ -115,8 +111,32 @@ public class Hammurabi {
                 totalDeaths, population, bushels, acres);
     }
 
+
     public static void main(String[] args) throws IOException {
         Hammurabi game = new Hammurabi();
         game.playGame();
+    }
+    public int getYear() {
+        return year;
+    }
+
+    public int getPopulation() {
+        return population;
+    }
+
+    public int getBushels() {
+        return bushels;
+    }
+
+    public int getAcres() {
+        return acres;
+    }
+
+    public int getLandPrice() {
+        return landPrice;
+    }
+
+    public int getTotalDeaths() {
+        return totalDeaths;
     }
 }

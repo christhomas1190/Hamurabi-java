@@ -28,19 +28,19 @@ public class Hammurabi {
 
             int bushelsToFeed = userInput("How many bushels would you like feed your people?(each person needs 20 per year to survive)", 0, bushels);
             bushels -= bushelsToFeed;
-            peopleStarving(bushelsToFeed);
+
 
 
             int acresToPlant = userInput("How many acres do you want to plant on", 0, Math.min(acres, population * 10));
             int seedsReq = acresToPlant / 2;
             if (seedsReq > bushels) {
-                System.out.println("Not enough grain to plant, since you can't add ill do it for you...");
+                System.out.println("Not enough grain to plant, since you can't add I'll do it for you...");
                 acresToPlant = bushels * 2;
                 seedsReq = bushels;
             }
             bushels -= seedsReq;
 
-
+            peopleStarving(bushelsToFeed);
             harvest(acresToPlant);
 
             landPrice = 17 + random.nextInt(6);
@@ -99,10 +99,6 @@ public class Hammurabi {
         }else{
             System.out.println("Everyone was fed");
         }
-    }
-    private void showStats(){
-        System.out.printf("\n--- Statistics after year %d ---\nPopulation: %d\nBushels: %d\nAcres: %d\nLand price: %d\nTotal Deaths: %d\n\n",
-                year, population, bushels, acres, landPrice, totalDeaths);
     }
 
     private void endGame() {

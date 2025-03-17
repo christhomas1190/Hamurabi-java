@@ -108,7 +108,7 @@ public class Hammurabi {
     }
 
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Hammurabi game = new Hammurabi();
         game.playGame();
     }
